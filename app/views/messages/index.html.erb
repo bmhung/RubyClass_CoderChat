@@ -1,0 +1,27 @@
+<% require_login %>
+<div class="row">
+	<div class="col-xs-6 col-xs-offset-3">
+		<table class="table">
+			<thead>
+				<th>From</th>
+				<th>Title</th>
+				<th></th>
+			</thead>
+			<tbody>
+			<% @messages.each do |m| %>
+				<tr <% unless m.read_at %>class="unread"<% end %>>
+					<td>
+						<%= m.from_user.name %>
+					</td>
+					<td>
+						<%= m.title %>
+					</td>
+					<td>
+						<%= link_to 'Read', message_path(m.id) %>
+					</td>
+				</tr>
+			<% end %>
+			</tbody>
+		</table>
+	</div>
+</div>

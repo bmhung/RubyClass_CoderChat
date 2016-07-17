@@ -1,0 +1,8 @@
+<% require_login %>
+<div class="add-friend-page row">
+	<div class="col-xs-6 col-xs-offset-3">
+		<div class="row">
+			<%= render partial: 'user_list_item', collection: @users, as: :user %>
+		</div>
+	</div>
+</div>

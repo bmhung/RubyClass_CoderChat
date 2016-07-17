@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>CoderChat</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+  	<div class="header">
+  		<%= link_to 'Coder Chat', root_path %>
+  	</div>
+  	<div class="container">
+      <div class="row">
+        <div class="col-xs-6 col-xs-offset-3">
+          <%= flash_messages %>
+        </div>
+      </div>      
+      <% if signed_in? %>
+      <div class="row">
+        <div class="col-xs-6 col-xs-offset-3">
+          <div class="row">
+            <ul class="nav nav-tabs">
+              <li class="<% if current_page?(messages_path) %>active<% end %>"><%= link_to 'Inbox', messages_path %></li>
+              <li class="<% if current_page?(sent_messages_path) %>active<% end %>"><%= link_to 'Sent', sent_messages_path %></li>
+              <li class="pull-right <% if current_page?(sign_out_path) %>active<% end %>"><%= link_to 'Sign out', sign_out_path %></li>
+              <li class="pull-right <% if current_page?(add_friend_path) %>active<% end %>"><%= link_to 'Add friend', add_friend_path %></li>
+              <li class="pull-right <% if current_page?(new_message_path) %>active<% end %>"><%= link_to 'New message', new_message_path %></li>
+            </ul>
+          </div>
+        </div>
+      </div>        
+      <% end %>
+  		<%= yield %>
+  	</div>
+  </body>
+</html>

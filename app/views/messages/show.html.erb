@@ -1,0 +1,15 @@
+<% require_login %>
+<div class="row show-message">
+	<div class="col-xs-6 col-xs-offset-3">
+		<% if @message %>			
+			<div><b>From:</b></div>
+			<div><%= @message.from_user.name %></div>
+			<div><b>Title:</b></div>
+			<div><%= @message.title %></div>
+			<div><b>Content:</b></div>
+			<div><%= @message.content %></div>
+		<% else %>
+			<b>You have read this message!</b>
+		<% end %>
+	</div>
+</div>

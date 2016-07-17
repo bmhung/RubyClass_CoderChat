@@ -1,0 +1,33 @@
+<% require_login %>
+<div class="row">
+	<div class="col-xs-6 col-xs-offset-3">
+		<table class="table">
+			<thead>
+				<th>Sent to</th>
+				<th>Title</th>
+				<th>Reat at</th>
+			</thead>
+			<tbody>
+			<% @messages.each do |m| %>
+				<tr>
+					<td>
+						<% m.to_users.each_with_index do |u, index| %>
+						<%= u.name %><% unless index == m.to_users.size - 1 %>,<% end %>
+						<% end %>		
+					</td>
+					<td>
+						<%= m.title %>
+					</td>
+					<td>
+						<% if m.read_at %>
+							<%= time_ago_in_words  m.read_at %> ago
+						<% else %>
+							Unread
+						<% end %>
+					</td>
+				</tr>
+			<% end %>
+			</tbody>
+		</table>
+	</div>
+</div>
