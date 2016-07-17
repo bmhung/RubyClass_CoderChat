@@ -83,6 +83,7 @@ test:
 #
 production:
   <<: *default
-  database: CoderChat_production
-  username: CoderChat
-  password: <%= ENV['CODERCHAT_DATABASE_PASSWORD'] %>
+  database: d14pl0t75qjvn0
+  url: postgres://qikuozhqmuwvvp:3dyNyr__95qS25VjbE5RSuNRWp@ec2-54-243-223-22.compute-1.amazonaws.com:5432/d14pl0t75qjvn0
+  username: qikuozhqmuwvvp
+  password: 3dyNyr__95qS25VjbE5RSuNRWp
