@@ -57,7 +57,10 @@ development:
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: CoderChat_test
+  database: d14pl0t75qjvn0
+  url: postgres://qikuozhqmuwvvp:3dyNyr__95qS25VjbE5RSuNRWp@ec2-54-243-223-22.compute-1.amazonaws.com:5432/d14pl0t75qjvn0
+  username: qikuozhqmuwvvp
+  password: 3dyNyr__95qS25VjbE5RSuNRWp
 
 # As with config/secrets.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
