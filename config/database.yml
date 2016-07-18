@@ -57,12 +57,12 @@ development:
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
 # Do not set this db to the same as development or production.
-# test:
-#   <<: *default
-#   database: d14pl0t75qjvn0
-#   url: postgres://qikuozhqmuwvvp:3dyNyr__95qS25VjbE5RSuNRWp@ec2-54-243-223-22.compute-1.amazonaws.com:5432/d14pl0t75qjvn0
-#   username: qikuozhqmuwvvp
-#   password: 3dyNyr__95qS25VjbE5RSuNRWp
+test:
+  <<: *default
+  database: dfdfsl6754f5o7
+  url: postgres://esgpitdnimtcaz:M2DswcZCxFiGjUHPCQDolzsWtd@ec2-54-83-44-229.compute-1.amazonaws.com:5432/dfdfsl6754f5o7
+  username: esgpitdnimtcaz
+  password: M2DswcZCxFiGjUHPCQDolzsWtd
 
 # As with config/secrets.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
