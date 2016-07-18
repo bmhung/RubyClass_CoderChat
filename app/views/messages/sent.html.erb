@@ -1,6 +1,7 @@
 <% require_login %>
 <div class="row">
 	<div class="col-xs-6 col-xs-offset-3">
+		<% if @messages.size > 0 %>
 		<table class="table">
 			<thead>
 				<th>Sent to</th>
@@ -29,5 +30,10 @@
 			<% end %>
 			</tbody>
 		</table>
+		<% else %>
+		<div class="text-center">
+			<b>You have no sent messages.</b>
+		</div>
+		<% end %>
 	</div>
 </div>

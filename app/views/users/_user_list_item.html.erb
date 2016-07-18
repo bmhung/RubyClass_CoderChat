@@ -1,6 +1,6 @@
 <div class="user-list-item col-xs-6">
 	<div class="clearfix">
-		<p><%= user.name %></p>
+		<p class="name"><%= user.name %></p>
 		<p class="email"><%= user.email %></p>
 		<% if is_friend?(user.id) %>
 			<%= form_tag "remove_friend", method: :post, class: "form pull-right" do %>

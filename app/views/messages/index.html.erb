@@ -1,20 +1,25 @@
 <% require_login %>
 <div class="row">
 	<div class="col-xs-6 col-xs-offset-3">
+		<% if @messages.size > 0 %>
 		<table class="table">
 			<thead>
-				<th>From</th>
-				<th>Title</th>
-				<th></th>
+				<th style="width: 20%">From</th>
+				<th style="width: 50%">Title</th>
+				<th style="width: 20%">Sent at</th>
+				<th style="width: 10%"></th>
 			</thead>
 			<tbody>
 			<% @messages.each do |m| %>
-				<tr <% unless m.read_at %>class="unread"<% end %>>
+				<tr <% unless m.read_at %>class="warning"<% end %>>
 					<td>
 						<%= m.from_user.name %>
 					</td>
 					<td>
 						<%= m.title %>
+					</td>
+					<td>
+						<%=  m.created_at.to_formatted_s(:short) %>
 					</td>
 					<td>
 						<%= link_to 'Read', message_path(m.id) %>
@@ -23,5 +28,10 @@
 			<% end %>
 			</tbody>
 		</table>
+		<% else %>
+		<div class="text-center">
+			<b>You have no incoming messages.</b>
+		</div>
+		<% end %>
 	</div>
 </div>

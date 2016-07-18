@@ -2,12 +2,14 @@
 <div class="row show-message">
 	<div class="col-xs-6 col-xs-offset-3">
 		<% if @message %>			
-			<div><b>From:</b></div>
-			<div><%= @message.from_user.name %></div>
-			<div><b>Title:</b></div>
-			<div><%= @message.title %></div>
-			<div><b>Content:</b></div>
-			<div><%= @message.content %></div>
+			<div>
+				<b>From: </b><%= @message.from_user.name %> [<%= @message.from_user.email %>]
+				<span class="pull-right">
+					<b>Sent at: </b><%= @message.created_at.to_formatted_s(:short) %>
+				</span>
+			</div>
+			<div><b>Title: </b><%= @message.title %></div>
+			<div class="content"><%= @message.content %></div>
 		<% else %>
 			<b>You have read this message!</b>
 		<% end %>

@@ -22,12 +22,25 @@
 	}
 }
 
+.menu {
+	margin-bottom: 20px;
+}
+
 .add-friend-page {
 	.user-list-item > div {
 		margin: 10px -10px 0 -10px;
-		padding: 5px;
+		padding: 10px;
 		border-radius: 3px;
 		border: 1px solid #eee;
+
+		.name {
+			font-size: 24px;
+			font-weight: bold;
+			margin-bottom: 0;
+		}
+		.email {
+			text-overflow: ellipsis;
+		}
 	}
 }
 
@@ -41,4 +54,9 @@
 
 .show-message {
 	margin-top: 20px;
+
+	.content {
+		border-top: 1px solid #ccc;
+		padding-top: 10px;
+	}
 }
