@@ -12,7 +12,8 @@ class SessionsController < ApplicationController
 				return redirect_to messages_path
 			end
 		end
-		redirect_to login_path
+		flash[:error] = "Login failed!"
+		redirect_to sign_in_path
 	end
 
 	def destroy
