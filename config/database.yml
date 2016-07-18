@@ -83,9 +83,9 @@ development:
 #   production:
 #     url: <%= ENV['DATABASE_URL'] %>
 #
-# production:
-#   <<: *default
-#   database: dfdfsl6754f5o7
-#   url: postgres://esgpitdnimtcaz:M2DswcZCxFiGjUHPCQDolzsWtd@ec2-54-83-44-229.compute-1.amazonaws.com:5432/dfdfsl6754f5o7
-#   username: esgpitdnimtcaz
-#   password: M2DswcZCxFiGjUHPCQDolzsWtd
+production:
+  <<: *default
+  database: dfdfsl6754f5o7
+  url: postgres://esgpitdnimtcaz:M2DswcZCxFiGjUHPCQDolzsWtd@ec2-54-83-44-229.compute-1.amazonaws.com:5432/dfdfsl6754f5o7
+  username: esgpitdnimtcaz
+  password: M2DswcZCxFiGjUHPCQDolzsWtd
